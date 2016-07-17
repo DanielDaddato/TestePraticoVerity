@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - TestePratico - Verity</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.1.0.js"></script>
+    <script src="~/scripts/jquery-3.1.0.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/scripts/TestePratico/Funcoes.js"></script>
+    <script src="~/scripts/TestePratico/Navegacao.js"></script>
+</head>
+<body id="body">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("Produtos", "Index", "Produtos",null, htmlAttributes: new { @class = "btn btn-link" })
+                @Html.ActionLink("Categorias", "Index", "Categoria",null, htmlAttributes: new { @class = "btn btn-link"})
+                @*<a href="javascript:void(0);" onclick="ProdutosIndex();" class="btn btn-link">Produtos</a>
+                <a href="javascript:void(0);" onclick="CategoriaIndex();" class="btn btn-link">Categoria</a>*@
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="principal"class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>@DateTime.Now.Year - Daniel Gonçalves Daddato</p>
+        </footer>
+    </div>
+</body>
+</html>
